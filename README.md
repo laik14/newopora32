@@ -1,2 +1,6 @@
-# newopora32
-site Us
+# ОПОРА
+Лендинг проекта ОПОРА.
+
+---
+Этот репозиторий: newopora32 (auto-created).
+
