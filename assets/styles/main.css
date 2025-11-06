@@ -1,0 +1,67 @@
+/* Brand overrides and scaffolding for layout refactor to ОПОРА */
+:root {
+	--brand-yellow: #f4d03f;
+	--brand-black: #000000;
+	--brand-white: #ffffff;
+	--brand-shadow: #000000;
+}
+
+/* Temporary: minimal overrides to align with the new mock */
+body.opora-theme {
+	background-color: #f5f5f5;
+}
+
+/* Navigation dots (side) placeholder */
+.opora-nav-dots {
+	position: fixed;
+	top: 50%;
+	left: 10px;
+	transform: translateY(-50%);
+	z-index: 999;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.opora-nav-dots button {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	border: 1px solid var(--brand-black);
+	background: #e6e6e6;
+	cursor: pointer;
+}
+
+.opora-nav-dots button.active {
+	background: var(--brand-yellow);
+}
+
+/* Modal visual language aligned to mock */
+.opora-modal .modal-content,
+.opora-modal .order-form-content {
+	border: 3px solid var(--brand-black);
+	box-shadow: 8px 8px 0 var(--brand-shadow);
+}
+
+.opora-modal .modal-header,
+.opora-modal .order-form-header {
+	background: var(--brand-yellow);
+	border-bottom: 2px solid var(--brand-black);
+}
+
+/* Utility */
+.opora-card {
+	border: 3px solid var(--brand-black);
+	box-shadow: 8px 8px 0 var(--brand-shadow);
+	background: var(--brand-white);
+}
+
+/* Placeholder classes to be expanded when layout is migrated */
+.section-opora-hero {}
+.section-opora-when {}
+.section-opora-about {}
+.section-opora-webinars {}
+.section-opora-form {}
+.section-opora-footer {}
+
+
