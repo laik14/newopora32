@@ -1,0 +1,178 @@
+/* City Modal Styles */
+#cityModal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    overflow-y: auto;
+}
+
+#cityModal .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 900px;
+    border: 3px solid #000;
+    box-shadow: 8px 8px 0 #000;
+    position: relative;
+}
+
+#cityModal .modal-header {
+    background-color: #f4d03f;
+    padding: 20px;
+    border-bottom: 2px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cityModal .modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+
+#cityModal .modal-body {
+    padding: 30px;
+    background: #fff;
+}
+
+#cityModal .close {
+    background: #fff;
+    border: 2px solid #000;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 #000;
+    transition: all 0.15s ease;
+}
+
+#cityModal .close:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0 #000;
+}
+
+/* City Grid Styles */
+#cityModal .cities-grid {
+    display: grid;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+#cityModal .city-region {
+    border: 2px solid #000;
+    background: #fff;
+    box-shadow: 4px 4px 0 #000;
+}
+
+#cityModal .city-region-header {
+    background: #f4d03f;
+    padding: 15px 20px;
+    border-bottom: 2px solid #000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#cityModal .city-region-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+#cityModal .city-region-desc {
+    font-size: 14px;
+    color: #000;
+    margin-left: auto;
+    text-align: right;
+}
+
+#cityModal .cities-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    background: #fff;
+}
+
+#cityModal .city-button {
+    background: #f5f5f5;
+    border: 2px solid #000;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 3px 3px 0 #000;
+    transition: all 0.2s ease;
+    text-align: center;
+    width: 100%;
+}
+
+#cityModal .city-button:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 0 #000;
+    background: #f4d03f;
+}
+
+#cityModal .city-button.active {
+    background: #f4d03f;
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 0 #000;
+}
+
+#cityModal .city-button.main {
+    background: #f4d03f;
+    font-weight: bold;
+}
+
+#cityModal .city-sublabel {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    #cityModal .modal-content {
+        margin: 10px;
+        width: calc(100% - 20px);
+        max-height: calc(100vh - 20px);
+    }
+
+    #cityModal .modal-header {
+        padding: 15px;
+    }
+
+    #cityModal .modal-body {
+        padding: 15px;
+    }
+
+    #cityModal .cities-grid {
+        gap: 20px;
+    }
+
+    #cityModal .city-region-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        padding: 12px 15px;
+    }
+
+    #cityModal .city-region-desc {
+        margin-left: 0;
+        text-align: left;
+        font-size: 13px;
+    }
+
+    #cityModal .cities-list {
+        padding: 15px;
+        grid-template-columns: 1fr;
+    }
+}
