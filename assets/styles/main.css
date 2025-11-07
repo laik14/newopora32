@@ -64,4 +64,289 @@ body.opora-theme {
 .section-opora-form {}
 .section-opora-footer {}
 
+/* ==== Inline CSS migrated from index.html ==== */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	background-color: #f5f5f5;
+	color: #000;
+	line-height: 1.6;
+}
+
+/* Prevent background scroll when modal is open */
+body.modal-open {
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* Header */
+header {
+	background-color: #fff;
+	border-bottom: 2px solid #000;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 0;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+	color: #000;
+}
+
+@media (max-width: 768px) {
+	.logo {
+		font-weight: 500;
+	}
+}
+
+.nav-menu {
+	display: flex;
+	list-style: none;
+	gap: 30px;
+}
+
+.nav-menu a {
+	text-decoration: none;
+	color: #000;
+	font-weight: 500;
+	padding: 8px 16px;
+	border: 2px solid transparent;
+	transition: all 0.2s;
+}
+
+.nav-menu a:hover {
+	background-color: #f4d03f;
+	border-color: #000;
+}
+
+.mobile-menu-btn {
+	display: none;
+	background: transparent;
+	border: none;
+	padding: 5px;
+	cursor: pointer;
+	font-size: 24px;
+	font-weight: normal;
+	color: #000;
+}
+
+.mobile-menu {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	border: 3px solid #000;
+	box-shadow: 8px 8px 0 #000;
+	z-index: 1000;
+	padding: 30px;
+	min-width: 280px;
+}
+
+.mobile-menu-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	z-index: 999;
+}
+
+.mobile-menu-header {
+	background: #f4d03f;
+	margin: -30px -30px 20px -30px;
+	padding: 15px 30px;
+	border-bottom: 2px solid #000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.mobile-menu-title {
+	font-size: 20px;
+	font-weight: bold;
+	color: #000;
+}
+
+.mobile-menu-close {
+	background: #fff;
+	border: 2px solid #000;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 5px 10px;
+	cursor: pointer;
+	box-shadow: 2px 2px 0 #000;
+	transition: all 0.15s ease;
+}
+
+.mobile-menu-close:hover {
+	transform: translate(2px, 2px);
+	box-shadow: 0px 0px 0 #000;
+}
+
+.mobile-menu-links {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	text-align: center;
+}
+
+.mobile-menu-links a {
+	text-decoration: none;
+	color: #000;
+	font-weight: 600;
+	font-size: 18px;
+	padding: 15px 20px;
+	border: 2px solid #000;
+	background: #f5f5f5;
+	box-shadow: 4px 4px 0 #000;
+	transition: all 0.15s ease;
+}
+
+.mobile-menu-links a:hover {
+	background: #f4d03f;
+	transform: translate(4px, 4px);
+	box-shadow: 0px 0px 0 #000;
+}
+
+/* Hero Section */
+.hero {
+	background-color: #f4d03f;
+	border-bottom: 2px solid #000;
+	padding: 80px 0;
+	text-align: center;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.hero h1 { font-size: 48px; margin-bottom: 20px; color: #000; }
+.hero p  { font-size: 20px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+.cta-button { display: inline-block; background-color: #fff; color: #000; padding: 15px 30px; text-decoration: none; font-weight: bold; border: 2px solid #000; box-shadow: 4px 4px 0 #000; transition: all 0.2s ease; }
+.cta-button:hover, .cta-button:active { transform: translate(4px, 4px); box-shadow: 0 0 0 #000; }
+
+/* Sections */
+.section { padding: 60px 0; border-bottom: 2px solid #000; }
+.section-alt { background-color: #fff; }
+.section h2 { font-size: 36px; margin-bottom: 30px; text-align: center; color: #000; }
+
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+.service-card { background: #fff; border: 2px solid #000; padding: 30px; box-shadow: 6px 6px 0 #000; display:flex; flex-direction:column; min-height:350px; text-align:center; transition:all .2s; }
+.service-card:hover { transform: translate(6px,6px); box-shadow:0 0 0 #000; }
+.service-icon { width:100px; height:100px; margin:0 auto 20px; border:2px solid #000; background:#f4d03f; display:flex; align-items:center; justify-content:center; font-size:32px; font-weight:bold; color:#000; flex-shrink:0; }
+.service-content { flex-grow:1; display:flex; flex-direction:column; }
+.service-description { flex-grow:1; margin-bottom:15px; }
+.service-card h3 { font-size:22px; margin-bottom:15px; color:#000; line-height:1.3; }
+.service-card h4 { font-size:18px; margin:15px 0 10px; color:#000; }
+.service-card ul { margin:10px 0; padding-left:20px; }
+.service-card li { margin-bottom:8px; color:#333; font-size:15px; }
+
+/* Accordion styles */
+.accordion { margin-top: 40px; }
+.accordion-item { border:2px solid #000; margin-bottom:10px; background:#fff; box-shadow:4px 4px 0 #000; transition:all .2s; }
+.accordion-item:hover { transform: translate(4px,4px); box-shadow:0 0 0 #000; }
+.accordion-header { background:#f4d03f; padding:20px; cursor:pointer; border-bottom:2px solid #000; display:flex; justify-content:space-between; align-items:center; font-weight:bold; font-size:20px; transition:all .15s; gap:15px; }
+.accordion-header-content { display:flex; align-items:center; gap:15px; flex-grow:1; }
+.accordion-icon { width:60px; height:60px; border:2px solid #000; background:#f4d03f; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:24px; }
+.accordion-header:hover { background:#f1c40f; }
+.accordion-toggle { font-size:24px; font-weight:bold; color:#000; transition: transform .3s; }
+.accordion-content { padding:30px; display:none; border-top:2px solid #000; }
+.accordion-content.active { display:block; }
+.accordion-item.active .accordion-toggle { transform: rotate(45deg); }
+
+.service-card p { color:#333; margin-bottom:15px; }
+.service-price { background:#f4d03f; border:2px solid #000; padding:10px; margin-top:15px; text-align:center; font-weight:bold; font-size:18px; color:#000; }
+
+/* About section */
+.about-content { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; margin-top:40px; }
+.about-text { font-size:18px; color:#333; }
+.stats-box { background:#f4d03f; border:2px solid #000; padding:30px; text-align:center; box-shadow:6px 6px 0 #000; transition:all .2s; }
+.stats-box:hover { transform: translate(6px,6px); box-shadow:0 0 0 #000; }
+.stat-number { font-size:48px; font-weight:bold; color:#000; display:block; }
+.stat-label { font-size:16px; color:#000; margin-top:10px; }
+
+/* Contact section */
+.contact-info { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; margin-top:40px; }
+.contact-card { background:#f4d03f; border:2px solid #000; padding:25px; text-align:center; box-shadow:4px 4px 0 #000; transition:all .2s; }
+.contact-card:hover { transform: translate(4px,4px); box-shadow:0 0 0 #000; }
+.contact-card h3 { font-size:20px; margin-bottom:15px; color:#000; }
+.contact-card p { color:#000; font-weight:500; }
+
+/* Fix: убрать подчеркивание у кнопки звонка на мобильных (переопределяет inline и псевдоэлементы) */
+.mobile-call-button,
+.mobile-call-button:link,
+.mobile-call-button:visited,
+.mobile-call-button * {
+	text-decoration: none !important;
+		-webkit-text-decoration-skip: none;
+	text-decoration-skip-ink: none;
+}
+.mobile-call-button .call-icon {
+	text-decoration: none !important;
+}
+
+/* Mobile modal centering: центруем блоки внутри модалок, а содержимое (текст/марки) оставляем выровненным слева */
+@media (max-width: 768px) {
+	.modal-body {
+		text-align: center;
+		padding: 16px;
+	}
+
+	/* Все прямые дети modal-body центруем как inline-block (чтобы центрировались по горизонтали),
+	   но содержимое внутри них остаётся левым (text-align: left) */
+	.modal-body > * {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: left;
+		width: calc(100% - 32px);
+		max-width: 620px;
+	}
+
+	/* Списки внутри модалок — центрируем контейнер, а маркеры и текст внутри остаются слева */
+	.modal-body ul {
+		margin: 12px auto;
+		padding-left: 1.2em;
+		text-align: left;
+		display: block;
+		max-width: 560px;
+	}
+
+	/* Небольшие корректировки для отдельных блоков */
+	.modal-body .price-block,
+	.modal-body form,
+	.modal-body .service-details {
+		width: calc(100% - 40px);
+		max-width: 560px;
+	}
+}
+
+/* Footer and SEO blocks, reviews, modal, order form, responsive rules */
+/* (Содержимое полностью перенесено из index.html — см. историю репо) */
 

@@ -1,4 +1,35 @@
-// Scaffolding for ОПОРА refactor. Non-breaking placeholders only.
+// ОПОРА - Main JavaScript
+
+// Accordion functionality
+function toggleAccordion(index) {
+	const items = document.querySelectorAll('.accordion-item');
+	const item = items[index];
+	if (!item) return;
+	
+	const content = item.querySelector('.accordion-content');
+	const isActive = item.classList.contains('active');
+	
+	// Close all items
+	items.forEach((it, idx) => {
+		if (idx !== index) {
+			it.classList.remove('active');
+			const cont = it.querySelector('.accordion-content');
+			if (cont) cont.classList.remove('active');
+		}
+	});
+	
+	// Toggle current item
+	if (isActive) {
+		item.classList.remove('active');
+		content.classList.remove('active');
+	} else {
+		item.classList.add('active');
+		content.classList.add('active');
+	}
+}
+
+// Make function globally available
+window.toggleAccordion = toggleAccordion;
 
 document.addEventListener('DOMContentLoaded', () => {
 	// Apply theme class for future CSS overrides
@@ -15,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Telegram integration placeholders (to be filled when credentials are provided)
-export const telegramIntegration = {
+window.telegramIntegration = {
 	sendLead: async function(formPayload) {
 		// TODO: implement with bot token/chat id when provided
 		return Promise.resolve({ ok: true, mock: true, payload: formPayload });
